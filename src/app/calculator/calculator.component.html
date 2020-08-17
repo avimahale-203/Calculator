@@ -1,0 +1,25 @@
+ <div class="card">
+        <div class="card-header">calculator</div>
+        <div class="card-body">
+                <div class="from-group d-flex flex-row">
+                    <input [(ngModel)]='num1'  type="number" name="num1" class="form-control">
+                    <input [(ngModel)]='num2'  type="number" name="num2" class="form-control">
+                    <input [(ngModel)]='num3'  type="number" name="num3" class="form-control">
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <button class="btn btn-success" (click)="addd()" >sum</button>
+                    <button class="btn btn-primary" (click)="sub()" >sub</button>
+                    <button class="btn btn-denger" (click)="mul()" >mul</button>
+                    <button class="btn btn-warning" (click)="divi()" >divi</button>
+                    <button class="btn btn-warning" (click)="ssq()" >ssqk</button>
+                    <button class="btn btn-success" (click)="divi()" >div</button>
+                    <button class="btn btn-warning" (click)="mp()" >mp</button>  
+                    <button class="btn btn-warning" (click)="mp()" >pm</button>
+                    <button class="btn btn-warning" (click)="omkar()" >omkar</button>       
+                </div>
+    
+        </div>
+        <div class="card-footer">
+            <h4> the sum of {{num1}} and {{num2}} and{{num3}} is {{result}}</h4>
+        </div>
+ </div>
