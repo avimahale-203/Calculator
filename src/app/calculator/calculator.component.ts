@@ -1,38 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
-  templateUrl:'./calculator.component.html',
+  templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent {
 
- public num1:number;
- public num3:number;
- public num2:number;
- public result:number;
+  calculatorForm: FormGroup = this.fb.group({
+    number1:['', Validators.required],
+    number2:['', Validators.required],
+  })
+  public result: number;
 
-addd(){
-     this.result = this.num1 + this.num2 + this.num3;
+  constructor(
+    private fb: FormBuilder,
+  ){}
 
+  add() {
+    this.result = this.calculatorForm.value.number1 + this.calculatorForm.value.number2
+
+  }
+  sub() {
+    this.result = this.calculatorForm.value.number1 - this.calculatorForm.value.number2
+  }
+
+  mul() {
+    this.result = this.calculatorForm.value.number1 * this.calculatorForm.value.number2
+  }
+
+  div() {
+    this.result = (this.calculatorForm.value.number1) / this.calculatorForm.value.number2;
+  }
 }
-sub(){
-  this.result = this.num1 -this.num2;}
-
-  mul(){
-    this.result = this.num1 * this.num2;}
-
-    divi(){
-      this.result = (this.num1) /(this.num2);}
-
-      ssq(){
-        this.result=this.num1*this.num1;
-      }
-
-      mp(){
-        this.result = (this.num1) +(this.num2)-(this.num3);}
-        pm(){
-          this.result = this.num1 - this.num2 + this.num3;}
-          omkar(){
-            this.result = this.num1 * this.num2 * this.num3;}
-         }

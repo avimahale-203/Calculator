@@ -1,25 +1,41 @@
- <div class="card">
-        <div class="card-header">calculator</div>
-        <div class="card-body">
-                <div class="from-group d-flex flex-row">
-                    <input [(ngModel)]='num1'  type="number" name="num1" class="form-control">
-                    <input [(ngModel)]='num2'  type="number" name="num2" class="form-control">
-                    <input [(ngModel)]='num3'  type="number" name="num3" class="form-control">
-                </div>
-                <div class="d-flex flex-row justify-content-between">
-                    <button class="btn btn-success" (click)="addd()" >sum</button>
-                    <button class="btn btn-primary" (click)="sub()" >sub</button>
-                    <button class="btn btn-denger" (click)="mul()" >mul</button>
-                    <button class="btn btn-warning" (click)="divi()" >divi</button>
-                    <button class="btn btn-warning" (click)="ssq()" >ssqk</button>
-                    <button class="btn btn-success" (click)="divi()" >div</button>
-                    <button class="btn btn-warning" (click)="mp()" >mp</button>  
-                    <button class="btn btn-warning" (click)="mp()" >pm</button>
-                    <button class="btn btn-warning" (click)="omkar()" >omkar</button>       
-                </div>
-    
-        </div>
-        <div class="card-footer">
-            <h4> the sum of {{num1}} and {{num2}} and{{num3}} is {{result}}</h4>
-        </div>
+ <div class="center">
+     <div class="card">
+            <div class="card-header">calculator</div>
+            <div class="card-body">
+                    <div class="from-group mb-5" [formGroup]="calculatorForm">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input formControlName="number1"  type="number" class="form-control">
+                                <small *ngIf="this.calculatorForm.get('number1').touched && this.calculatorForm.get('number1').hasError('Required')">
+                                    Please Enter a value
+                                </small>
+                            </div>
+                            <div class="col-md-4">
+                                <input formControlName="number2"  type="number" class="form-control">
+                                <small *ngIf="this.calculatorForm.get('number2').touched && this.calculatorForm.get('number2').hasError('Required')">
+                                    Please Enter a value
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-success" (click)="add()" >sum</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary" (click)="sub()" >sub</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-denger" (click)="mul()" >mul</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-warning" (click)="div()" >divi</button>
+                        </div>
+                    </div>
+        
+            </div>
+            <div class="card-footer">
+                <h4>Result : {{result | number: '1.2-2'}}</h4>
+            </div>
+     </div>
  </div>
