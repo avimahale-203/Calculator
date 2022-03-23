@@ -5,13 +5,13 @@
                     <div class="from-group mb-5" [formGroup]="calculatorForm">
                         <div class="row">
                             <div class="col-md-4">
-                                <input formControlName="number1"  type="number" class="form-control">
+                                <input aria-label="number1" formControlName="number1"  type="number" class="form-control">
                                 <small *ngIf="this.calculatorForm.get('number1').touched && this.calculatorForm.get('number1').hasError('Required')">
                                     Please Enter a value
                                 </small>
                             </div>
                             <div class="col-md-4">
-                                <input formControlName="number2"  type="number" class="form-control">
+                                <input aria-label="number2" formControlName="number2"  type="number" class="form-control">
                                 <small *ngIf="this.calculatorForm.get('number2').touched && this.calculatorForm.get('number2').hasError('Required')">
                                     Please Enter a value
                                 </small>

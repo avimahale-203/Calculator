@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CalculatorComponent } from './calculator.component';
 
@@ -8,7 +9,8 @@ describe('CalculatorComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalculatorComponent ]
+      declarations: [ CalculatorComponent ],
+      imports: [ReactiveFormsModule],
     })
     .compileComponents();
   }));
