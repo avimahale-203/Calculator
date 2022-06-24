@@ -1,5 +1,5 @@
 {
-  "name": "Calculator",
+  "name": "calculator",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,14 +12,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~13.3.0",
-    "@angular/common": "~13.3.0",
-    "@angular/compiler": "~13.3.0",
-    "@angular/core": "~13.3.0",
-    "@angular/forms": "~13.3.0",
-    "@angular/platform-browser": "~13.3.0",
-    "@angular/platform-browser-dynamic": "~13.3.0",
-    "@angular/router": "~13.3.0",
+    "@angular/animations": "^14.0.3",
+    "@angular/common": "^14.0.3",
+    "@angular/compiler": "^14.0.3",
+    "@angular/core": "^14.0.3",
+    "@angular/forms": "^14.0.3",
+    "@angular/platform-browser": "^14.0.3",
+    "@angular/platform-browser-dynamic": "^14.0.3",
+    "@angular/router": "^14.0.3",
     "bootstrap": "^4.5.0",
     "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.5.4",
@@ -27,9 +27,9 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.3.0",
-    "@angular/cli": "~13.3.0",
-    "@angular/compiler-cli": "~13.3.0",
+    "@angular-devkit/build-angular": "^14.0.3",
+    "@angular/cli": "^14.0.3",
+    "@angular/compiler-cli": "^14.0.3",
     "@angularclass/hmr": "^3.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",

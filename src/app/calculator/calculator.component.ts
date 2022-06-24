@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+interface CalculatorForm {
+  number1: FormControl<number>;
+  number2: FormControl<number>;
+}
 
 @Component({
   selector: 'app-calculator',
@@ -8,9 +12,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CalculatorComponent {
 
-  calculatorForm: FormGroup = this.fb.group({
-    number1:['', Validators.required],
-    number2:['', Validators.required],
+  calculatorForm: FormGroup = new FormGroup<CalculatorForm>({
+    number1: new FormControl(null, Validators.required),
+    number2: new FormControl(null, Validators.required),
   })
   public result: number;
 
@@ -19,8 +23,7 @@ export class CalculatorComponent {
   ){}
 
   add() {
-    this.result = this.calculatorForm.value.number1 + this.calculatorForm.value.number2
-
+    this.result = this.calculatorForm.value.number1 + this.calculatorForm.value.number2;
   }
   sub() {
     this.result = this.calculatorForm.value.number1 - this.calculatorForm.value.number2
