@@ -6,14 +6,14 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <input aria-label="number1" formControlName="number1"  type="number" class="form-control" id="number1">
-                                <small *ngIf="this.calculatorForm.get('number1').touched && this.calculatorForm.get('number1').hasError('Required')">
-                                    Please Enter a value
+                                <small class="text-danger" *ngIf="this.calculatorForm.get('number1').touched && this.calculatorForm.get('number1').hasError('required')">
+                                    Required
                                 </small>
                             </div>
                             <div class="col-md-4">
                                 <input aria-label="number2" formControlName="number2"  type="number" class="form-control" id="number2">
-                                <small *ngIf="this.calculatorForm.get('number2').touched && this.calculatorForm.get('number2').hasError('Required')">
-                                    Please Enter a value
+                                <small class="text-danger" *ngIf="this.calculatorForm.get('number2').touched && this.calculatorForm.get('number2').hasError('required')">
+                                    Required
                                 </small>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                     </div>
             </div>
             <div class="card-footer">
-                <h4 class="result">Result : {{result | number: '1.2-2'}}</h4>
+                <h4 class="result">Result : {{calculatorForm.valid ? (result | number: '1.2-2') : ''}}</h4>
             </div>
      </div>
  </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 interface CalculatorForm {
   number1: FormControl<number>;
@@ -8,19 +8,19 @@ interface CalculatorForm {
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css']
+  styleUrls: ['./calculator.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CalculatorComponent {
 
   calculatorForm: FormGroup = new FormGroup<CalculatorForm>({
-    number1: new FormControl(null, Validators.required),
+    number1: new FormControl(null, Validators.required,),
     number2: new FormControl(null, Validators.required),
   })
   public result: number;
 
   constructor(
-    private fb: FormBuilder,
-  ){}
+  ) { }
 
   add() {
     this.result = this.calculatorForm.value.number1 + this.calculatorForm.value.number2;
