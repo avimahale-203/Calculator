@@ -17,6 +17,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run single unit test
+`ng test --include='**/calculator.component.spec.ts'` 
 
 ## Running end-to-end tests
 

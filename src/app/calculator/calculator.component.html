@@ -5,13 +5,13 @@
                     <div class="from-group mb-5" [formGroup]="calculatorForm">
                         <div class="row">
                             <div class="col-md-4">
-                                <input aria-label="number1" formControlName="number1"  type="number" class="form-control">
+                                <input aria-label="number1" formControlName="number1"  type="number" class="form-control" id="number1">
                                 <small *ngIf="this.calculatorForm.get('number1').touched && this.calculatorForm.get('number1').hasError('Required')">
                                     Please Enter a value
                                 </small>
                             </div>
                             <div class="col-md-4">
-                                <input aria-label="number2" formControlName="number2"  type="number" class="form-control">
+                                <input aria-label="number2" formControlName="number2"  type="number" class="form-control" id="number2">
                                 <small *ngIf="this.calculatorForm.get('number2').touched && this.calculatorForm.get('number2').hasError('Required')">
                                     Please Enter a value
                                 </small>
@@ -26,16 +26,15 @@
                             <button class="btn btn-primary" (click)="sub()" >sub</button>
                         </div>
                         <div class="col-md-3">
-                            <button class="btn btn-denger" (click)="mul()" >mul</button>
+                            <button class="btn btn-danger" (click)="mul()" >mul</button>
                         </div>
                         <div class="col-md-3">
                             <button class="btn btn-warning" (click)="div()" >divi</button>
                         </div>
                     </div>
-        
             </div>
             <div class="card-footer">
-                <h4>Result : {{result | number: '1.2-2'}}</h4>
+                <h4 class="result">Result : {{result | number: '1.2-2'}}</h4>
             </div>
      </div>
  </div>
