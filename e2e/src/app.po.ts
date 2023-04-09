@@ -6,6 +6,15 @@ export class AppPage {
   }
 
   getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    return element(by.css('.card-header')).getText() as Promise<string>;
+  }
+
+  inputElements(){
+    element(by.id('number1')).sendKeys(6);
+    element(by.id('number2')).sendKeys(2);
+  }
+
+  getResult(){
+    return element(by.css('.result')).getText();
   }
 }
