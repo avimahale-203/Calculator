@@ -75,22 +75,22 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Calculator:build"
+            "buildTarget": "Calculator:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Calculator:build:production"
+              "buildTarget": "Calculator:build:production"
             },
             "hmr": {
               "hmr": true,
-              "browserTarget": "Calculator:build:hmr"
+              "buildTarget": "Calculator:build:hmr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Calculator:build"
+            "buildTarget": "Calculator:build"
           }
         },
         "test": {
